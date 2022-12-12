@@ -1,0 +1,23 @@
+@use "../abstracts/mixins" as *;
+
+.app {
+  border: 1px solid #f00;
+
+  @include sm {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
+
+    .navbar {
+      grid-column: 2;
+    }
+
+    .sidebar {
+      grid-row: 1 / -1;
+    }
+
+    .page {
+      grid-column: 2;
+    }
+  }
+}

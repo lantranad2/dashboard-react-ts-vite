@@ -1,5 +1,5 @@
 const Single = () => {
-  return <div>Single</div>;
+  return <div className="page single">Single</div>;
 };
 
 export default Single;

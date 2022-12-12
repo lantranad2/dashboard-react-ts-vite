@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import List from "./pages/List";
 import New from "./pages/New";
 import Single from "./pages/Single";
-import "./App.scss";
+import "./sass/layouts/app.scss";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },

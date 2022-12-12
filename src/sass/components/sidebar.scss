@@ -1,0 +1,15 @@
+@use "../abstracts/mixins" as *;
+
+.sidebar {
+  border: 1px solid #f00;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: max-content;
+  min-height: 100vh;
+
+  @include sm {
+    position: static;
+  }
+}

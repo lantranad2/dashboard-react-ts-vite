@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import Home from "./pages/Home";
+import List from "./pages/List";
+import New from "./pages/New";
+import Single from "./pages/Single";
 import "./App.scss";
-import Navbar from "./components/navbar/Navbar";
-import Sidebar from "./components/sidebar/Sidebar";
-import Home from "./pages/home/Home";
-import List from "./pages/list/List";
-import New from "./pages/new/New";
-import Single from "./pages/single/Single";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Navbar />
       <Sidebar />
       <RouterProvider router={router} />

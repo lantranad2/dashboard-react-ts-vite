@@ -1,5 +1,3 @@
-import "./new.scss";
-
 const New = () => {
   return <div>New</div>;
 };

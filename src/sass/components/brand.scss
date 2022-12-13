@@ -1,0 +1,10 @@
+.brand {
+  color: var(--color-primary);
+  font-size: 3rem;
+  font-weight: 1000;
+  line-height: 1;
+
+  &__secondary {
+    color: var(--color-secondary);
+  }
+}

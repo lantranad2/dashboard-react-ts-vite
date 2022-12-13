@@ -1,3 +1,7 @@
 .navbar {
   border: 1px solid #f00;
+
+  &__icon-menu {
+    cursor: pointer;
+  }
 }

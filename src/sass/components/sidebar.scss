@@ -3,11 +3,53 @@
 .sidebar {
   border: 1px solid #f00;
 
+  padding: 0 var(--gutter);
   position: fixed;
   top: 0;
   left: 0;
   width: max-content;
   min-height: 100vh;
+  transform: translateX(-101%);
+
+  &--opened {
+    transform: translateX(0);
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__close-icon {
+    font-size: 2.5rem !important;
+    cursor: pointer;
+
+    &:hover {
+      fill: var(--color-muted-darker);
+    }
+  }
+
+  &__close-list {
+  }
+
+  &__close-sublist {
+  }
+
+  &__sublist-title {
+  }
+
+  &__sublist-list {
+  }
+
+  &__item {
+  }
+
+  &__link {
+  }
+
+  &__icon {
+  }
 
   @include sm {
     position: static;

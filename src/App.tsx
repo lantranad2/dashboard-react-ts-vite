@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/sidebar/Sidebar";
+import { AppContextProvider } from "./context/AppContext";
 import Home from "./pages/Home";
 import List from "./pages/List";
 import New from "./pages/New";
@@ -16,11 +17,13 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <Sidebar />
-      <RouterProvider router={router} />
-    </div>
+    <AppContextProvider>
+      <div className="app">
+        <Navbar />
+        <Sidebar />
+        <RouterProvider router={router} />
+      </div>
+    </AppContextProvider>
   );
 }
 

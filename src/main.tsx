@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import List from "./pages/List";
 import New from "./pages/New";
 import Single from "./pages/Single";
+import { StyledEngineProvider } from "@mui/material/styles";
+import { AppContextProvider } from "./context/AppContext";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <StyledEngineProvider injectFirst>
+      <AppContextProvider>
+        <RouterProvider router={router} />
+      </AppContextProvider>
+    </StyledEngineProvider>
   </React.StrictMode>
 );

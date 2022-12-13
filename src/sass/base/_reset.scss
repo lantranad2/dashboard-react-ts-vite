@@ -12,18 +12,18 @@ html {
 
 body {
   --gutter: 1.6rem;
-  // --color-bg: #fff;
   --color-bg: #dee2e6;
   --color-bg-light: #f1f3f5;
-  // --color-muted: #a69999;
-  // --color-muted-darker: #7a7171;
   --color-muted: #868e96;
   --color-muted-dark: #343a40;
   --color-muted-light: #ced4da;
-  --color-primary: #6439ff;
+  --color-primary: #339af0;
   --color-secondary: #ff7a85;
 
-  // --color-bg-darkmode: #111111;
+  &.dark-mode {
+    --color-bg: #212529;
+    --color-bg-light: #343a40;
+  }
 
   box-sizing: border-box;
   font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont,

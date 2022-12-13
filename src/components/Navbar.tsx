@@ -33,12 +33,12 @@ const Navbar = () => {
         <SearchOutlinedIcon className="navbar__icon navbar__icon--search" />
       </div>
       {state.darkMode ? (
-        <DarkModeOutlinedIcon
+        <LightModeOutlinedIcon
           className="navbar__icon navbar__icon--mode"
           onClick={() => dispatch({ type: "TOGGLE-MODE" })}
         />
       ) : (
-        <LightModeOutlinedIcon
+        <DarkModeOutlinedIcon
           className="navbar__icon navbar__icon--mode"
           onClick={() => dispatch({ type: "TOGGLE-MODE" })}
         />

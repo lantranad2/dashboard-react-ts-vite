@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import "../sass/components/brand.scss";
 
 const Brand = () => {
   return (
-    <a className="brand" href="#">
+    <Link className="brand" to="/">
       lam<span className="brand__secondary">dev</span>
-    </a>
+    </Link>
   );
 };
 

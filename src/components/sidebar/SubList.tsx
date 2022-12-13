@@ -10,12 +10,9 @@ const SubList: React.FC<SubListProps> = ({ data }) => {
     <div className="sidebar__sublist">
       <span className="sidebar__sublist-title">{data.title}</span>
       <ul className="sidebar__sublist-list">
-        {data.items.map(({ id, Icon, text }) => (
+        {data.items.map(({ id, Icon, text, link }) => (
           <li className="sidebar__item" key={id}>
-            <Link
-              className="sidebar__link"
-              to={text.toLowerCase().split(" ").join("-")}
-            >
+            <Link className="sidebar__link" to={`/${link}`}>
               {<Icon className="sidebar__icon" />} {text}
             </Link>
           </li>

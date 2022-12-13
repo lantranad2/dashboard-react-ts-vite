@@ -24,6 +24,7 @@ interface ItemType {
     muiName: string;
   };
   text: string;
+  link: string;
 }
 
 interface SubListType {
@@ -33,41 +34,51 @@ interface SubListType {
 
 const mainData: SubListType = {
   title: "main",
-  items: [{ id: 1, Icon: DashboardIcon, text: "Dashboard" }],
+  items: [{ id: 1, Icon: DashboardIcon, text: "Dashboard", link: "" }],
 };
 
 const listsData: SubListType = {
   title: "lists",
   items: [
-    { id: 1, Icon: UsersIcon, text: "Users" },
-    { id: 2, Icon: ProductsIcon, text: "Products" },
-    { id: 3, Icon: OrdersIcon, text: "Orders" },
-    { id: 4, Icon: DeliveryIcon, text: "Delivery" },
+    { id: 1, Icon: UsersIcon, text: "Users", link: "users" },
+    { id: 2, Icon: ProductsIcon, text: "Products", link: "products" },
+    { id: 3, Icon: OrdersIcon, text: "Orders", link: "no-implementation" },
+    { id: 4, Icon: DeliveryIcon, text: "Delivery", link: "no-implementation" },
   ],
 };
 
 const usefulData: SubListType = {
   title: "useful",
   items: [
-    { id: 1, Icon: StatsIcon, text: "Stats" },
-    { id: 2, Icon: NotificationsIcon, text: "Notifications" },
+    { id: 1, Icon: StatsIcon, text: "Stats", link: "no-implementation" },
+    {
+      id: 2,
+      Icon: NotificationsIcon,
+      text: "Notifications",
+      link: "no-implementation",
+    },
   ],
 };
 
 const serviceData: SubListType = {
   title: "service",
   items: [
-    { id: 1, Icon: SystemHealthIcon, text: "System Health" },
-    { id: 2, Icon: LogsIcon, text: "Logs" },
-    { id: 3, Icon: SettingsIcon, text: "Settings" },
+    {
+      id: 1,
+      Icon: SystemHealthIcon,
+      text: "System Health",
+      link: "no-implementation",
+    },
+    { id: 2, Icon: LogsIcon, text: "Logs", link: "no-implementation" },
+    { id: 3, Icon: SettingsIcon, text: "Settings", link: "no-implementation" },
   ],
 };
 
 const userData: SubListType = {
   title: "user",
   items: [
-    { id: 1, Icon: ProfileIcon, text: "Profile" },
-    { id: 2, Icon: LogoutIcon, text: "Logout" },
+    { id: 1, Icon: ProfileIcon, text: "Profile", link: "no-implementation" },
+    { id: 2, Icon: LogoutIcon, text: "Logout", link: "no-implementation" },
   ],
 };
 

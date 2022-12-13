@@ -12,9 +12,14 @@ html {
 
 body {
   --gutter: 1.6rem;
-  --color-bg: #fff;
-  --color-muted: #a69999;
-  --color-muted-darker: #7a7171;
+  // --color-bg: #fff;
+  --color-bg: #dee2e6;
+  --color-bg-light: #f1f3f5;
+  // --color-muted: #a69999;
+  // --color-muted-darker: #7a7171;
+  --color-muted: #868e96;
+  --color-muted-dark: #343a40;
+  --color-muted-light: #ced4da;
   --color-primary: #6439ff;
   --color-secondary: #ff7a85;
 
@@ -26,6 +31,7 @@ body {
     sans-serif;
   font-size: 1.6rem;
   color: var(--color-muted);
+  background: var(--color-bg);
 }
 
 a {

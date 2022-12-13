@@ -1,4 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { StyledEngineProvider } from "@mui/material/styles";
+
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import { AppContextProvider } from "./context/AppContext";
@@ -17,13 +19,15 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <AppContextProvider>
-      <div className="app">
-        <Navbar />
-        <Sidebar />
-        <RouterProvider router={router} />
-      </div>
-    </AppContextProvider>
+    <StyledEngineProvider injectFirst>
+      <AppContextProvider>
+        <div className="app">
+          <Navbar />
+          <Sidebar />
+          <RouterProvider router={router} />
+        </div>
+      </AppContextProvider>
+    </StyledEngineProvider>
   );
 }
 

@@ -9,15 +9,15 @@
     grid-template-rows: min-content 1fr;
 
     .navbar {
-      grid-column: 2;
+      grid-column: 1 / -1;
     }
 
     .sidebar {
-      grid-row: 1 / -1;
+      grid-row: 2 / -1;
     }
 
     .page {
-      grid-column: 2;
+      // grid-column: 2;
     }
   }
 }

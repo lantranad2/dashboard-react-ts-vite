@@ -1,7 +1,19 @@
+@use "../abstracts/mixins" as *;
+
 .navbar {
   border: 1px solid #f00;
 
   &__icon-menu {
     cursor: pointer;
+  }
+
+  & .brand {
+    display: none;
+  }
+
+  @include sm {
+    & .brand {
+      display: inline-block;
+    }
   }
 }

@@ -14,7 +14,7 @@ function App() {
   }, [state.darkMode]);
 
   return (
-    <div className="app">
+    <div className="container app">
       <Navbar />
       <Sidebar />
       <Outlet />

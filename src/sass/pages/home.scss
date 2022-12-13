@@ -1,3 +1,19 @@
-.home {
+@use "../abstracts/mixins" as *;
+
+.page--home {
   border: 1px solid #f00;
+}
+
+.widgets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+
+  @include xs-2 {
+    grid-template-columns: 1fr;
+  }
+
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

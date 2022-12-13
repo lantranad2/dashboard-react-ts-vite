@@ -3,3 +3,11 @@
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
+
+.card {
+  width: 100%;
+  margin-inline: auto;
+  background: var(--color-bg-light);
+  padding: 1rem;
+  border-radius: 7px;
+}

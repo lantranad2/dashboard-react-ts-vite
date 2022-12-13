@@ -1,0 +1,82 @@
+.widget {
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &__number {
+    color: var(--color-primary);
+    font-size: 3.4rem;
+    font-weight: 700;
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    line-height: 1;
+    border-bottom: 0.5px solid currentColor;
+    align-self: flex-start;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__up {
+    display: flex;
+    align-items: flex-start;
+    color: #2f9e44;
+  }
+
+  &__down {
+    display: flex;
+    align-items: flex-start;
+    color: #e03131;
+  }
+
+  &__icon-up,
+  &__icon-down {
+    font-size: 2.4rem;
+    margin-top: -3px;
+  }
+
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2.5rem;
+    padding: 5px;
+    border-radius: 7px;
+  }
+
+  &__icon--users {
+    fill: #e03131;
+    background: #ffa8a8;
+  }
+
+  &__icon--orders {
+    fill: #f08c00;
+    background: #ffec99;
+  }
+
+  &__icon--earnings {
+    fill: #2f9e44;
+    background: #b2f2bb;
+  }
+
+  &__icon--balance {
+    fill: #9c36b5;
+    background: #eebefa;
+  }
+}

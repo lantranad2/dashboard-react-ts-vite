@@ -6,7 +6,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: max-content;
   min-height: 100vh;
   transform: translateX(-101%);
   transition: all 0.4s;
@@ -20,7 +19,7 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    padding: 0 5px 0 var(--gutter);
+    padding: 1rem 5px 0 var(--gutter);
     margin-bottom: 2rem;
   }
 

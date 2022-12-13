@@ -3,17 +3,147 @@
 .navbar {
   border: 1px solid #f00;
 
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: var(--color-bg-light);
+
   &__icon-menu {
     cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+    width: 3.2rem;
+    height: 2.6rem;
+
+    &:hover {
+      fill: var(--color-muted-light);
+      background: var(--color-primary);
+    }
   }
 
   & .brand {
     display: none;
   }
 
+  &__search {
+    border: 0.5px solid var(--color-muted);
+    padding: 3px 0 3px 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    margin-right: auto;
+  }
+
+  &__search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.4rem;
+  }
+
+  &__icon {
+    width: 3.2rem;
+    height: 2.6rem;
+  }
+
+  &__icon--search,
+  &__icon--mode {
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__notification,
+  &__message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &__notification-text,
+  &__message-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    color: #fff;
+    background: #f00;
+    font-size: 1.2rem;
+
+    position: absolute;
+    top: -5px;
+    right: -5px;
+  }
+
+  &__img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+  }
+
+  @include xs-2 {
+    gap: 5px;
+
+    &__icon,
+    &__icon-menu,
+    &__img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    &__notification-text,
+    &__message-text {
+      width: 1.7rem;
+      height: 1.7rem;
+      font-size: 1rem;
+    }
+  }
+
+  @include xs-3 {
+    &__search-input {
+      max-width: 100px;
+    }
+  }
+
+  @include xs-4 {
+    gap: 7px;
+
+    &__search-input {
+      max-width: 70px;
+    }
+
+    &__icon,
+    &__icon-menu,
+    &__img {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &__notification-text,
+    &__message-text {
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  @include xs-5 {
+  }
+
   @include sm {
     & .brand {
       display: inline-block;
+    }
+
+    &__icon-menu {
+      display: none;
     }
   }
 }

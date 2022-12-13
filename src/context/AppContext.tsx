@@ -2,14 +2,16 @@ import { createContext, useReducer } from "react";
 
 interface AppState {
   openSidebar: boolean;
+  darkMode: boolean;
 }
 
 interface AppAction {
-  type: "OPEN-SIDEBAR" | "CLOSE-SIDEBAR";
+  type: "OPEN-SIDEBAR" | "CLOSE-SIDEBAR" | "TOGGLE-MODE";
 }
 
 const initialState = {
   openSidebar: false,
+  darkMode: false,
 };
 
 interface ContextType {
@@ -23,6 +25,8 @@ const reducer = (state: AppState, action: AppAction) => {
       return { ...state, openSidebar: true };
     case "CLOSE-SIDEBAR":
       return { ...state, openSidebar: false };
+    case "TOGGLE-MODE":
+      return { ...state, darkMode: !state.darkMode };
     default:
       return state;
   }

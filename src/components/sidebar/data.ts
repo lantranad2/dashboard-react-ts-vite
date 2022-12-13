@@ -39,8 +39,8 @@ const mainData: SubListType = {
 const listsData: SubListType = {
   title: "lists",
   items: [
-    { id: 1, Icon: UsersIcon, text: "User" },
-    { id: 2, Icon: ProductsIcon, text: "Product" },
+    { id: 1, Icon: UsersIcon, text: "Users" },
+    { id: 2, Icon: ProductsIcon, text: "Products" },
     { id: 3, Icon: OrdersIcon, text: "Orders" },
     { id: 4, Icon: DeliveryIcon, text: "Delivery" },
   ],

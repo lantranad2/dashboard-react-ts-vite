@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -37,6 +38,7 @@ body {
   font-size: 1.6rem;
   color: var(--color-muted);
   background: var(--color-bg);
+  overflow-x: hidden;
 }
 
 a {

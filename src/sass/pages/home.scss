@@ -4,7 +4,7 @@
   border: 1px solid #f00;
 
   display: grid;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .widgets {
@@ -18,5 +18,18 @@
 
   @include lg {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.revenue {
+  border: 1px solid #00f;
+  height: min-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  @include md {
+    flex-direction: row;
   }
 }

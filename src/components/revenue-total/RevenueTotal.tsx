@@ -25,7 +25,7 @@ const RevenueTotal: React.FC<RevenueTotalProps> = ({ data }) => {
   return (
     <div className="card revenue__total">
       <div className="header">
-        <span className="header__heading">Total Revenue</span>
+        <h2 className="header__heading">Total Revenue</h2>
         <MoreVertIcon className="header__icon" />
       </div>
       <div className="details">

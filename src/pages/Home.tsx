@@ -3,6 +3,7 @@ import { users, orders, earnings, balance } from "../components/widget/data";
 import Widget from "../components/widget/Widget";
 import "../sass/pages/home.scss";
 import { totalRevenue } from "../components/revenue-total/data";
+import RenenueMoths from "../components/revenue-months/RenenueMoths";
 
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
       </div>
       <div className="revenue">
         <RevenueTotal data={totalRevenue} />
-        <div className="revenue__last-months">chart</div>
+        <RenenueMoths />
       </div>
       <div className="transactions">table</div>
     </div>

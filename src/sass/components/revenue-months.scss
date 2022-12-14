@@ -1,0 +1,33 @@
+@use "../abstracts/mixins" as *;
+
+.revenue__months {
+  border: 1px solid #0f0;
+  background: var(--color-bg-light);
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .header {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .chart {
+    &__area-chart {
+    }
+
+    &__area {
+    }
+  }
+
+  @include md {
+    height: auto;
+    flex: 1;
+  }
+
+  @include lg {
+    flex: 2;
+  }
+}

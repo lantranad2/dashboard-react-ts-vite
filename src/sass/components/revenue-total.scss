@@ -14,6 +14,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  height: min-content;
 
   .header {
     display: flex;
@@ -117,5 +118,9 @@
 
   .CircularProgressbar {
     max-width: 150px;
+  }
+
+  @include md {
+    flex: 1;
   }
 }

@@ -1,6 +1,8 @@
+import RevenueTotal from "../components/revenue-total/RevenueTotal";
 import { users, orders, earnings, balance } from "../components/widget/data";
 import Widget from "../components/widget/Widget";
 import "../sass/pages/home.scss";
+import { totalRevenue } from "../components/revenue-total/data";
 
 const Home = () => {
   return (
@@ -12,7 +14,7 @@ const Home = () => {
         <Widget data={balance} />
       </div>
       <div className="revenue">
-        <div className="revenue__total">progress</div>
+        <RevenueTotal data={totalRevenue} />
         <div className="revenue__last-months">chart</div>
       </div>
       <div className="transactions">table</div>

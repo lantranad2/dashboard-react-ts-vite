@@ -1,0 +1,121 @@
+@use "../abstracts/mixins" as *;
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: var(--color-primary);
+}
+.CircularProgressbar .CircularProgressbar-trail {
+  stroke: var(--color-bg);
+}
+.CircularProgressbar .CircularProgressbar-text {
+  fill: var(--color-primary);
+}
+
+.revenue__total {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__heading {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    &__icon {
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+
+    &__heading {
+      font-size: 1.8rem;
+    }
+
+    &__totalsales {
+      color: var(--color-primary);
+      font-size: 5rem;
+      line-height: 1;
+    }
+
+    &__subheading {
+      align-self: stretch;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+
+    &__transactions {
+      align-self: stretch;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__target,
+    &__week,
+    &__month {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    &__info {
+      display: flex;
+      align-items: center;
+    }
+
+    &__info--up {
+      color: var(--color-up);
+    }
+
+    &__info--down {
+      color: var(--color-down);
+    }
+
+    &__icon-up,
+    &__icon-down {
+      font-size: 2rem;
+    }
+
+    &__money {
+      font-size: 1.4rem;
+    }
+
+    @include xs-4 {
+      &__title {
+        font-size: 1.4rem;
+      }
+
+      &__icon-up,
+      &__icon-down {
+        font-size: 1.8rem;
+      }
+
+      &__money {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .CircularProgressbar {
+    max-width: 150px;
+  }
+}

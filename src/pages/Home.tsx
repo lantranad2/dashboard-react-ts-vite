@@ -4,6 +4,8 @@ import Widget from "../components/widget/Widget";
 import "../sass/pages/home.scss";
 import { totalRevenue } from "../components/revenue-total/data";
 import RenenueMoths from "../components/revenue-months/RenenueMoths";
+import TableTransactions from "../components/table-transactions/TableTransactions";
+import { transactions } from "../components/table-transactions/data";
 
 const Home = () => {
   return (
@@ -18,7 +20,10 @@ const Home = () => {
         <RevenueTotal data={totalRevenue} />
         <RenenueMoths />
       </div>
-      <div className="transactions">table</div>
+      <div className="card transactions">
+        <h2 className="transactions__heading">Latest Transactions</h2>
+        <TableTransactions transactions={transactions} />
+      </div>
     </div>
   );
 };

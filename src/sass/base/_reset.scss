@@ -26,6 +26,13 @@ body {
   --color-red: #e03131;
   --color-red-bg: #ffa8a8;
 
+  --color-approved: #2f9e44;
+  --color-approved-bg: #b2f2bb;
+  --color-declined: #e03131;
+  --color-declined-bg: #ffa8a8;
+  --color-pending: #f08c00;
+  --color-pending-bg: #ffec99;
+
   &.dark-mode {
     --color-bg: #212529;
     --color-bg-light: #343a40;

@@ -1,0 +1,95 @@
+@use "../abstracts/mixins" as *;
+
+.table-transactions {
+  .header {
+  }
+
+  .header__cell {
+    font-size: inherit;
+    color: inherit;
+    font-weight: 500;
+    padding: 16px 5px;
+  }
+
+  .body {
+  }
+
+  .body__cell {
+    font-size: 1.4rem;
+    color: inherit;
+    padding: 16px 5px;
+
+    .product {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border: 1px solid #f00;
+    }
+
+    & img {
+      width: 3rem;
+      height: 3rem;
+      object-fit: cover;
+      border-radius: 100%;
+      border: 1px solid currentColor;
+    }
+
+    .status {
+      padding: 10px;
+      border-radius: 5px;
+      width: 90%;
+      max-width: 80px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .approved {
+      color: var(--color-approved);
+      background: var(--color-approved-bg);
+    }
+
+    .declined {
+      color: var(--color-declined);
+      background: var(--color-declined-bg);
+    }
+
+    .pending {
+      color: var(--color-pending);
+      background: var(--color-pending-bg);
+    }
+  }
+
+  .id,
+  .customer,
+  .date,
+  .payment {
+    display: none;
+  }
+
+  @include xs-3 {
+    .header__cell,
+    .body__cell {
+      padding: 16px 2px;
+    }
+  }
+
+  @include xsm {
+    .customer {
+      display: table-cell;
+    }
+  }
+
+  @include md {
+    .customer,
+    .date {
+      display: table-cell;
+    }
+  }
+
+  @include lg {
+    .id,
+    .payment {
+      display: table-cell;
+    }
+  }
+}

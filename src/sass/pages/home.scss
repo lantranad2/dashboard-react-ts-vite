@@ -33,3 +33,10 @@
     flex-direction: row;
   }
 }
+
+.transactions {
+  &__heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+}

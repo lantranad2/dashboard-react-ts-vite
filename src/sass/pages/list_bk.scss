@@ -1,0 +1,492 @@
+@use "../abstracts/mixins" as *;
+
+.page--list {
+  border: 1px solid #f00;
+
+  background: var(--color-bg-light);
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .heading {
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+
+  .adding {
+    outline: none;
+    color: var(--color-approved);
+    border: 1px solid var(--color-approved);
+    background: transparent;
+    border-radius: 7px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background: var(--color-approved);
+      color: #fff;
+    }
+  }
+
+  .cell-actions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &__action {
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-transform: capitalize;
+      padding: 5px 7px;
+      border-radius: 5px;
+      border: 1px solid currentColor;
+      transition: all 0.5s;
+      cursor: pointer;
+      outline: none;
+      line-height: 1;
+    }
+
+    &__view {
+      color: var(--color-primary);
+    }
+
+    &__view:hover {
+      color: var(--color-muted-light);
+      background: var(--color-primary);
+    }
+
+    &__delete {
+      color: var(--color-down);
+    }
+
+    &__delete:hover {
+      color: var(--color-muted-light);
+      background: var(--color-down);
+    }
+  }
+
+  .cell-user {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    &__img {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 100%;
+    }
+  }
+
+  .status {
+    padding: 5px 7px;
+    border-radius: 7px;
+
+    &--passive {
+      color: var(--color-declined);
+      background: var(--color-declined-bg);
+    }
+
+    &--active {
+      color: var(--color-approved);
+      background: var(--color-approved-bg);
+    }
+
+    &--pending {
+      color: var(--color-pending);
+      background: var(--color-pending-bg);
+    }
+  }
+}
+
+.MuiDataGrid-columnHeaderTitle {
+  font-size: 1.6rem;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+.MuiDataGrid-columnSeparator--sideRight {
+  // margin-right: 0 !important;
+}
+
+.MuiDataGrid-columnSeparator {
+  // display: none;
+}
+
+.MuiDataGrid-iconSeparator {
+  font-size: 2rem;
+  color: var(--color-muted) !important;
+  display: none;
+}
+
+.MuiDataGrid-sortIcon {
+  font-size: 1.6rem !important;
+  color: var(--color-muted);
+}
+
+.MuiDataGrid-menuIconButton svg[data-testid="TripleDotsVerticalIcon"] {
+  font-size: 1.4rem;
+  color: var(--color-muted);
+}
+
+// .MuiDataGrid-cellContent {
+// font-size: 1.5rem;
+// color: var(--color-muted);
+// }
+
+.MuiDataGrid-cell {
+  font-size: 1.5rem;
+  color: var(--color-muted);
+}
+
+.MuiDataGrid-columnHeader:focus-within,
+.MuiDataGrid-cell:focus-within {
+  outline: none !important;
+}
+
+// MuiDataGrid-cell--withRenderer MuiDataGrid-cell MuiDataGrid-cell--textLeft
+
+// Rows per page: 100 'icon'
+// .MuiTablePagination-selectLabel (Rows per pages:)
+// MuiSelect-select MuiTablePagination-select MuiSelect-standard MuiInputBase-input (100)
+// MuiSelect-icon MuiTablePagination-selectIcon MuiSelect-iconStandard (icon)
+
+// 1-100 of 100
+.MuiTablePagination-displayedRows {
+  font-size: 1.6rem;
+  color: var(--color-muted);
+}
+
+// < >
+.MuiTablePagination-actions svg[data-testid="KeyboardArrowLeftIcon"],
+.MuiTablePagination-actions svg[data-testid="KeyboardArrowRightIcon"] {
+  width: 2.2rem;
+  height: 2.2rem;
+  color: var(--color-muted);
+}
+
+// 2 rows selected
+.MuiDataGrid-selectedRowCount {
+  font-size: 1.4rem;
+  color: var(--color-muted);
+}
+
+// checkbox
+svg[data-testid="CheckBoxOutlineBlankIcon"] {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-muted);
+}
+
+svg[data-testid="CheckBoxIcon"] {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-primary);
+}
+
+svg[data-testid="IndeterminateCheckBoxIcon"] {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-primary);
+}
+
+// open menu > item
+.MuiMenuItem-root {
+  font-size: 1.4rem;
+  color: var(--color-muted);
+}
+
+.MuiDataGrid-overlay {
+  font-size: 1.4rem;
+  color: var(--color-muted);
+}
+
+// every column
+.MuiDataGrid-columnHeader {
+  width: auto !important;
+  min-width: initial !important;
+  max-width: initial !important;
+  // height: initial !important;
+  // min-height: auto !important;
+  // flex: 1;
+  border: 1px solid #f00;
+}
+
+// every cell in a row
+.MuiDataGrid-cell {
+  width: auto !important;
+  min-width: initial !important;
+  max-width: initial !important;
+  // height: auto !important;
+  // min-height: auto !important;
+  white-space: normal !important;
+  border: 1px solid #f00;
+}
+
+.MuiDataGrid-columnHeaderCheckbox,
+.MuiDataGrid-cellCheckbox,
+.MuiDataGrid-columnHeader[data-field="id"],
+.MuiDataGrid-cell[data-field="id"],
+.MuiDataGrid-columnHeader[data-field="email"],
+.MuiDataGrid-cell[data-field="email"],
+.MuiDataGrid-columnHeader[data-field="age"],
+.MuiDataGrid-cell[data-field="age"] {
+  display: none !important;
+}
+
+.MuiDataGrid-virtualScrollerContent {
+  width: auto !important;
+}
+
+.MuiDataGrid-columnHeadersInner {
+  flex: 1;
+
+  & > div[role="row"] {
+    width: 100%;
+  }
+}
+
+.MuiDataGrid-virtualScrollerRenderZone {
+  // border: 1px solid #00f;
+
+  width: 100%;
+
+  & > div[role="row"] {
+    // border: 1px solid #0f0;
+
+    width: 100%;
+  }
+}
+
+.MuiDataGrid-columnHeader[data-field="user"],
+.MuiDataGrid-cell[data-field="user"] {
+  flex: 3;
+}
+
+.MuiDataGrid-columnHeader[data-field="status"],
+.MuiDataGrid-cell[data-field="status"] {
+  flex: 1;
+}
+
+.MuiDataGrid-columnHeader[data-field="actions"],
+.MuiDataGrid-cell[data-field="actions"] {
+  flex: 2;
+}
+
+// products
+// header (ID), cell(ID): display none
+.MuiDataGrid-columnHeader[data-field="category"],
+.MuiDataGrid-cell[data-field="category"] {
+  display: none;
+}
+
+.MuiDataGrid-columnHeader[data-field="title"],
+.MuiDataGrid-cell[data-field="title"] {
+  flex: 3;
+}
+
+.MuiDataGrid-columnHeader[data-field="price"],
+.MuiDataGrid-cell[data-field="price"] {
+  flex: 0.9;
+}
+
+.MuiDataGrid-columnHeader[data-field="stock"],
+.MuiDataGrid-cell[data-field="stock"] {
+  flex: 0.9;
+}
+
+@include xs-2 {
+  .page--list {
+    .cell-user {
+      gap: 4px;
+
+      &__img {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+
+    .status {
+      padding: 3px 4px;
+    }
+
+    .cell-actions {
+      &__action {
+        font-size: 1.3rem;
+        padding: 3px 4px;
+      }
+    }
+  }
+
+  .MuiDataGrid-cell {
+    font-size: 1.3rem;
+  }
+
+  .MuiDataGrid-columnHeader[data-field="price"],
+  .MuiDataGrid-cell[data-field="price"] {
+    display: none;
+  }
+}
+
+@include xs-3 {
+  .page--list {
+    .cell-user {
+      &__img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    .status {
+      padding: 2px 2px;
+    }
+
+    .cell-actions {
+      &__action {
+        font-size: 1.1rem;
+        padding: 2px 2px;
+      }
+    }
+  }
+
+  .MuiDataGrid-cell {
+    font-size: 1.1rem;
+  }
+}
+
+@include xs-4 {
+  .page--list {
+    .cell-user {
+      &__img {
+        width: 1.7rem;
+        height: 1.7rem;
+      }
+    }
+  }
+}
+
+@include xsm {
+  .MuiDataGrid-columnHeader[data-field="user"],
+  .MuiDataGrid-cell[data-field="user"] {
+    flex: 4;
+  }
+
+  .MuiDataGrid-columnHeader[data-field="age"],
+  .MuiDataGrid-cell[data-field="age"] {
+    display: flex !important;
+    flex: 1;
+  }
+
+  .MuiDataGrid-columnHeader[data-field="status"],
+  .MuiDataGrid-cell[data-field="status"] {
+    flex: 2;
+  }
+
+  .MuiDataGrid-columnHeader[data-field="actions"],
+  .MuiDataGrid-cell[data-field="actions"] {
+    flex: 3;
+  }
+
+  // products
+  .MuiDataGrid-columnHeader[data-field="price"],
+  .MuiDataGrid-cell[data-field="price"] {
+    flex: 1;
+  }
+
+  .MuiDataGrid-columnHeader[data-field="stock"],
+  .MuiDataGrid-cell[data-field="stock"] {
+    flex: 1;
+  }
+}
+
+@include md {
+  .MuiDataGrid-columnHeaderCheckbox,
+  .MuiDataGrid-cellCheckbox {
+    display: flex !important;
+    flex: 1;
+  }
+
+  .MuiDataGrid-columnHeader[data-field="user"],
+  .MuiDataGrid-cell[data-field="user"] {
+    flex: 4;
+  }
+
+  .MuiDataGrid-columnHeader[data-field="age"],
+  .MuiDataGrid-cell[data-field="age"] {
+    flex: 1;
+  }
+
+  .MuiDataGrid-columnHeader[data-field="status"],
+  .MuiDataGrid-cell[data-field="status"] {
+    flex: 2;
+  }
+
+  .MuiDataGrid-columnHeader[data-field="actions"],
+  .MuiDataGrid-cell[data-field="actions"] {
+    flex: 3;
+  }
+
+  // products
+  .MuiDataGrid-columnHeader[data-field="category"],
+  .MuiDataGrid-cell[data-field="category"] {
+    display: flex;
+    flex: 2;
+  }
+}
+
+@media screen and (min-width: 839px) {
+  .MuiDataGrid-cell:last-child {
+    display: none;
+  }
+}
+
+@include lg {
+  .MuiDataGrid-columnHeader[data-field="id"],
+  .MuiDataGrid-cell[data-field="id"],
+  .MuiDataGrid-columnHeader[data-field="email"],
+  .MuiDataGrid-cell[data-field="email"],
+  .MuiDataGrid-columnHeader[data-field="age"],
+  .MuiDataGrid-cell[data-field="age"] {
+    display: flex !important;
+  }
+
+  .MuiDataGrid-columnHeaderCheckbox,
+  .MuiDataGrid-cellCheckbox {
+    flex: 1;
+  }
+
+  .MuiDataGrid-columnHeader[data-field="id"],
+  .MuiDataGrid-cell[data-field="id"] {
+    flex: 1;
+  }
+
+  .MuiDataGrid-columnHeader[data-field="user"],
+  .MuiDataGrid-cell[data-field="user"] {
+    flex: 4;
+  }
+
+  .MuiDataGrid-columnHeader[data-field="email"],
+  .MuiDataGrid-cell[data-field="email"] {
+    flex: 5;
+  }
+
+  .MuiDataGrid-columnHeader[data-field="age"],
+  .MuiDataGrid-cell[data-field="age"] {
+    flex: 1;
+  }
+
+  .MuiDataGrid-columnHeader[data-field="status"],
+  .MuiDataGrid-cell[data-field="status"] {
+    flex: 2;
+  }
+
+  .MuiDataGrid-columnHeader[data-field="actions"],
+  .MuiDataGrid-cell[data-field="actions"] {
+    flex: 3;
+  }
+}
+
+// filter
+// show columns

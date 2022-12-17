@@ -1,0 +1,139 @@
+@use "../abstracts/mixins" as *;
+
+.page--new {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  .heading {
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .img {
+    max-width: 320px;
+    margin: 0 auto;
+    border-radius: 7px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &__adding {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__input--img {
+      display: none;
+    }
+
+    &__input-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__input-group--img {
+    }
+
+    &__label {
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+
+    &__label--img {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    &__upload-icon {
+      font-size: 2.2rem;
+    }
+
+    &__input {
+      // font-family: inherit;
+      // font-size: inherit;
+      // color: inherit;
+      background: var(--color-bg);
+      padding: 7px 10px;
+      border-radius: 7px;
+      border: none;
+      outline: none;
+
+      &::placeholder {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__submit {
+      align-self: center;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: 1px solid var(--color-primary);
+      outline: none;
+      background: var(--color-primary);
+      color: var(--color-muted-light);
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background: transparent;
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  @include xsm {
+    .form {
+      &__adding {
+        flex-direction: row;
+        gap: 2rem;
+      }
+
+      &__group {
+        flex: 1;
+      }
+
+      &__input-group--img {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  @include lg {
+    .content {
+      flex-direction: row;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .img-wrapper {
+      flex: 1;
+      border: 1px solid #f00;
+    }
+
+    .form {
+      flex: 2;
+      border: 1px solid #f00;
+    }
+  }
+}

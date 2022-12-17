@@ -10,6 +10,7 @@
   transform: translateX(-101%);
   transition: all 0.4s;
   background: var(--color-bg-light);
+  z-index: 9999;
 
   &--opened {
     transform: translateX(0);

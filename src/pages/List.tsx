@@ -1,6 +1,6 @@
 import { DataGrid, GridColumns, GridRenderCellParams } from "@mui/x-data-grid";
 import { useLayoutEffect, useState } from "react";
-import { Link, useLocation, useResolvedPath } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   usersColumns,
   usersRows,
@@ -9,7 +9,6 @@ import {
   UserRow,
   ProductRow,
 } from "../components/table-list/data";
-import TableList from "../components/table-list/TableList";
 import "../sass/pages/list.scss";
 
 const List = () => {
@@ -60,7 +59,7 @@ const List = () => {
   };
 
   return (
-    <div className="page page--list">
+    <div className="card page page--list">
       <header className="header">
         <h1 className="heading">{title}</h1>
         <Link className="adding" to="new">
@@ -68,6 +67,7 @@ const List = () => {
         </Link>
       </header>
       <DataGrid
+        className="grid-table"
         autoHeight={true}
         columns={columns.concat(actionsColumn)}
         rows={rows}

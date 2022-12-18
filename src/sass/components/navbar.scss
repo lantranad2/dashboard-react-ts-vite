@@ -4,9 +4,10 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background: var(--color-bg-light);
+  // padding-top: 1rem;
+  // padding-bottom: 1rem;
+  padding: 1rem;
+  // background: var(--color-bg-light);
 
   &__icon-menu {
     cursor: pointer;

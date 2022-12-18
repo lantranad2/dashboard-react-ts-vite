@@ -10,16 +10,16 @@ import { transactions } from "../components/table-transactions/data";
 const Home = () => {
   return (
     <div className="page page--home">
-      {/* <div className="widgets">
+      <div className="widgets">
         <Widget data={users} />
         <Widget data={orders} />
         <Widget data={earnings} />
         <Widget data={balance} />
-      </div> */}
-      {/* <div className="revenue">
+      </div>
+      <div className="revenue">
         <RevenueTotal data={totalRevenue} />
         <RenenueMoths />
-      </div> */}
+      </div>
       <div className="card transactions">
         <h2 className="transactions__heading">Latest Transactions</h2>
         <TableTransactions transactions={transactions} />

@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="card navbar">
       <MenuIcon className="navbar__icon-menu" onClick={handleSidebarOpenning} />
       <Brand />
       <div className="navbar__search">

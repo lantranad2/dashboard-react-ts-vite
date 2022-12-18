@@ -28,7 +28,7 @@ const RenenueMoths = () => {
         <AreaChart
           className="chart__area-chart"
           data={data}
-          margin={{ right: 20 }}
+          // margin={{ right: 20 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" interval="preserveStartEnd" axisLine={false} />

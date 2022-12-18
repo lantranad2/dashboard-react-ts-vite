@@ -22,7 +22,7 @@ const Home = () => {
       </div>
       <div className="card transactions">
         <h2 className="transactions__heading">Latest Transactions</h2>
-        <TableTransactions transactions={transactions} />
+        {/* <TableTransactions transactions={transactions} /> */}
       </div>
     </div>
   );

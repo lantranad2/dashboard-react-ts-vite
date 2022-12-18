@@ -34,7 +34,7 @@ const TableTransactions: React.FC<TableTransactionsProps> = ({
         </TableHead>
         <TableBody className="body">
           {transactions.map((t) => (
-            <TableRow key={t.id}>
+            <TableRow key={t.id} className="body__row">
               <TableCell className="body__cell id">{t.id}</TableCell>
               <TableCell className="body__cell">
                 <div className="product">

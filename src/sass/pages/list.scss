@@ -1,14 +1,11 @@
 @use "../abstracts/mixins" as *;
 
 .page--list {
-  // background: var(--color-bg-light);
-  // display: flex;
-  // flex-direction: column;
-  // gap: 1rem;
-
   .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
   }
 
   .heading {
@@ -368,37 +365,44 @@ svg[data-testid="IndeterminateCheckBoxIcon"] {
 }
 
 @include xsm {
-  .MuiDataGrid-columnHeader[data-field="user"],
-  .MuiDataGrid-cell[data-field="user"] {
-    flex: 4;
+  .page--list {
+    .status {
+      // font-size: 1.4rem;
+      // padding: 2px 2px;
+    }
   }
 
-  .MuiDataGrid-columnHeader[data-field="age"],
-  .MuiDataGrid-cell[data-field="age"] {
-    display: flex !important;
-    flex: 1;
-  }
+  // .MuiDataGrid-columnHeader[data-field="user"],
+  // .MuiDataGrid-cell[data-field="user"] {
+  //   flex: 3;
+  // }
 
-  .MuiDataGrid-columnHeader[data-field="status"],
-  .MuiDataGrid-cell[data-field="status"] {
-    flex: 2;
-  }
+  // .MuiDataGrid-columnHeader[data-field="age"],
+  // .MuiDataGrid-cell[data-field="age"] {
+  //   display: flex !important;
+  //   flex: 1;
+  // }
 
-  .MuiDataGrid-columnHeader[data-field="actions"],
-  .MuiDataGrid-cell[data-field="actions"] {
-    flex: 3;
-  }
+  // .MuiDataGrid-columnHeader[data-field="status"],
+  // .MuiDataGrid-cell[data-field="status"] {
+  //   flex: 2;
+  // }
 
-  // products
-  .MuiDataGrid-columnHeader[data-field="price"],
-  .MuiDataGrid-cell[data-field="price"] {
-    flex: 1;
-  }
+  // .MuiDataGrid-columnHeader[data-field="actions"],
+  // .MuiDataGrid-cell[data-field="actions"] {
+  //   flex: 3;
+  // }
 
-  .MuiDataGrid-columnHeader[data-field="stock"],
-  .MuiDataGrid-cell[data-field="stock"] {
-    flex: 1;
-  }
+  // // products
+  // .MuiDataGrid-columnHeader[data-field="price"],
+  // .MuiDataGrid-cell[data-field="price"] {
+  //   flex: 1;
+  // }
+
+  // .MuiDataGrid-columnHeader[data-field="stock"],
+  // .MuiDataGrid-cell[data-field="stock"] {
+  //   flex: 1;
+  // }
 }
 
 @include md {
@@ -415,6 +419,7 @@ svg[data-testid="IndeterminateCheckBoxIcon"] {
 
   .MuiDataGrid-columnHeader[data-field="age"],
   .MuiDataGrid-cell[data-field="age"] {
+    display: flex !important;
     flex: 1;
   }
 
@@ -436,7 +441,7 @@ svg[data-testid="IndeterminateCheckBoxIcon"] {
   }
 }
 
-@media screen and (min-width: 839px) {
+@media screen and (min-width: 881px) {
   .MuiDataGrid-cell:last-child {
     display: none;
   }

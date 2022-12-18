@@ -86,7 +86,7 @@ const usersRows: UserRow[] = [
     img: "https://images.unsplash.com/photo-1417325384643-aac51acc9e5d?q=75&fm=jpg&w=100",
     email: "gdescroix4@microsoft.com",
     age: 32,
-    status: "pending",
+    status: "active",
   },
   {
     id: 6,
@@ -102,7 +102,7 @@ const usersRows: UserRow[] = [
     img: "https://images.unsplash.com/photo-1417325384643-aac51acc9e5d?q=75&fm=jpg&w=100",
     email: "rbattison6@sun.com",
     age: 37,
-    status: "approved",
+    status: "active",
   },
 ];
 

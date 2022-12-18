@@ -1,9 +1,13 @@
+@use "../abstracts/mixins" as *;
+
 .container {
   width: min(100%, 1200px);
   margin: var(--gutter) auto;
-  // margin-inline: auto;
   padding-inline: var(--gutter);
-  // border: 1px solid #f00;
+
+  @include xs-3 {
+    padding-inline: 0.8rem;
+  }
 }
 
 .card {
@@ -13,4 +17,8 @@
   padding: 1rem;
   border-radius: 7px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+  @include xs-3 {
+    padding: 0.5rem;
+  }
 }

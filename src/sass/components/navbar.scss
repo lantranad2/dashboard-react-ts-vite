@@ -4,10 +4,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  // padding-top: 1rem;
-  // padding-bottom: 1rem;
   padding: 1rem;
-  // background: var(--color-bg-light);
 
   &__icon-menu {
     cursor: pointer;
@@ -90,6 +87,10 @@
   @include xs-2 {
     gap: 5px;
 
+    &__search-input {
+      max-width: 120px;
+    }
+
     &__icon,
     &__icon-menu,
     &__img {
@@ -107,13 +108,25 @@
 
   @include xs-3 {
     &__search-input {
-      max-width: 100px;
+      max-width: 90px;
+    }
+
+    &__icon,
+    &__icon-menu,
+    &__img {
+      width: 2.2rem;
+      height: 2.2rem;
+    }
+
+    &__notification-text,
+    &__message-text {
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 1rem;
     }
   }
 
   @include xs-4 {
-    gap: 7px;
-
     &__search-input {
       max-width: 70px;
     }
@@ -123,13 +136,6 @@
     &__img {
       width: 2rem;
       height: 2rem;
-    }
-
-    &__notification-text,
-    &__message-text {
-      width: 1.5rem;
-      height: 1.5rem;
-      font-size: 1rem;
     }
   }
 

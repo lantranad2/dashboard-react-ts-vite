@@ -14,6 +14,9 @@
   .body {
   }
 
+  .body__row {
+  }
+
   .body__cell {
     font-size: 1.4rem;
     color: inherit;
@@ -79,7 +82,6 @@
   }
 
   @include md {
-    .customer,
     .date {
       display: table-cell;
     }

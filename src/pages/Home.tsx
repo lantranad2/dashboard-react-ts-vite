@@ -18,7 +18,7 @@ const Home = () => {
       </div>
       <div className="revenue">
         <RevenueTotal data={totalRevenue} />
-        {/* <RenenueMoths /> */}
+        <RenenueMoths />
       </div>
       <div className="card transactions">
         <h2 className="transactions__heading">Latest Transactions</h2>

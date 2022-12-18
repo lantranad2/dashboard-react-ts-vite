@@ -66,7 +66,7 @@ const List = () => {
           Add New
         </Link>
       </header>
-      <DataGrid
+      {/* <DataGrid
         className="grid-table"
         autoHeight={true}
         columns={columns.concat(actionsColumn)}
@@ -74,7 +74,7 @@ const List = () => {
         checkboxSelection
         pageSize={3}
         rowsPerPageOptions={[3]}
-      />
+      /> */}
     </div>
   );
 };

@@ -25,11 +25,7 @@ const RenenueMoths = () => {
     <div className="card revenue__months">
       <h2 className="header">Last 6 Months (Revenue)</h2>
       <ResponsiveContainer className="chart">
-        <AreaChart
-          className="chart__area-chart"
-          data={data}
-          // margin={{ right: 20 }}
-        >
+        <AreaChart className="chart__area-chart" data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" interval="preserveStartEnd" axisLine={false} />
           <YAxis hide />

@@ -1,12 +1,11 @@
 @use "../abstracts/mixins" as *;
 
 .app {
-  border: 1px solid #f00;
-
   @include sm {
     display: grid;
     grid-template-columns: 15rem 1fr;
     grid-template-rows: min-content 1fr;
+    gap: 1.6rem;
 
     .navbar {
       grid-column: 1 / -1;

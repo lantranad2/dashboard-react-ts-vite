@@ -1,8 +1,6 @@
 @use "../abstracts/mixins" as *;
 
 .sidebar {
-  border: 1px solid #f00;
-
   position: fixed;
   top: 0;
   left: 0;

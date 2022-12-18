@@ -1,8 +1,6 @@
 @use "../abstracts/mixins" as *;
 
 .page--list {
-  border: 1px solid #f00;
-
   background: var(--color-bg-light);
 
   .header {
@@ -59,6 +57,7 @@
     }
 
     &__delete {
+      background: transparent;
       color: var(--color-down);
     }
 

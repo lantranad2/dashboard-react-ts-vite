@@ -1,8 +1,6 @@
 @use "../abstracts/mixins" as *;
 
 .page--home {
-  border: 1px solid #f00;
-
   display: grid;
   gap: 4rem;
 }
@@ -22,7 +20,6 @@
 }
 
 .revenue {
-  border: 1px solid #00f;
   height: min-content;
 
   display: flex;

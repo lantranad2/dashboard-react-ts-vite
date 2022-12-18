@@ -23,7 +23,7 @@ const data = [
 const RenenueMoths = () => {
   return (
     <div className="card revenue__months">
-      <h2 className="header">Last 6 Months (Renenue)</h2>
+      <h2 className="header">Last 6 Months (Revenue)</h2>
       <ResponsiveContainer className="chart">
         <AreaChart className="chart__area-chart" data={data}>
           <CartesianGrid strokeDasharray="3 3" />

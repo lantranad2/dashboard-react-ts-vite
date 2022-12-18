@@ -1,0 +1,39 @@
+@use "../abstracts//mixins" as *;
+.page--single {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  .info-months {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  @include md {
+    .info-months {
+      flex-direction: row;
+      gap: 1.6rem;
+
+      .info {
+        flex: 1;
+      }
+
+      .revenue__months {
+        flex: 1;
+      }
+    }
+  }
+
+  @include lg {
+    .info-months {
+      .info {
+        flex: 2;
+      }
+
+      .revenue__months {
+        flex: 3;
+      }
+    }
+  }
+}
